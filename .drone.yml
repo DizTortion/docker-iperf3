@@ -7,7 +7,7 @@ steps:
     settings:
       repo: registry.internal.hoffmeister.biz/diztortion/iperf3
       registry: registry.internal.hoffmeister.biz
-      auto_tag: false
+      auto_tag: true
 
   - name: clair
     image: jmccann/drone-clair:1
