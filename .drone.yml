@@ -7,3 +7,13 @@ steps:
     settings:
       repo: registry.internal.hoffmeister.biz/diztortion/iperf3
       registry: registry.internal.hoffmeister.biz
+
+  - name: clair
+    image: jmccann/drone-clair:1
+    settings:
+      url: https://clair.internal.hoffmeister.biz
+      username:
+        from_secret: CLAIR_USERNAME
+      password:
+        from_secret: CLAIR_PASSWORD
+      scan_image: registry.internal.hoffmeister.biz/diztortion/iperf3
